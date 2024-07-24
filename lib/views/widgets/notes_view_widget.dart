@@ -25,6 +25,21 @@ class NoteItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.yellow, borderRadius: BorderRadius.circular(16)),
+      child: Column(
+        children: [
+          ListTile(
+            title: Text('Flutter Tips'),
+            subtitle: Text('build your career with thrawt samy'),
+            trailing: IconButton(
+              onPressed: () {},
+              icon: (Icons.delete),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
