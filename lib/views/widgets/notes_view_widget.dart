@@ -13,7 +13,8 @@ class NotesViewBody extends StatelessWidget {
           SizedBox(
             height: 50,
           ),
-          CustomAppBar()
+          CustomAppBar(),
+          NoteItem()
         ],
       ),
     );
@@ -29,14 +30,21 @@ class NoteItem extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.yellow, borderRadius: BorderRadius.circular(16)),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title: Text('Flutter Tips'),
+            title: Text(
+              'Flutter Tips',
+            ),
             subtitle: Text('build your career with thrawt samy'),
             trailing: IconButton(
               onPressed: () {},
-              icon: (Icons.delete),
+              icon: Icon(Icons.delete),
             ),
+          ),
+          Text(
+            'may21 , 2022',
+            style: TextStyle(color: Colors.black),
           )
         ],
       ),
