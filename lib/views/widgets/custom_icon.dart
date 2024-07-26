@@ -13,8 +13,9 @@ class CustomSearchIcon extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: Icon(
-        Icons.search,
+        (Icons.delete),
         size: 28,
+        color: Colors.black,
       ),
     );
   }
