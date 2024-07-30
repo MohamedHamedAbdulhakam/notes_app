@@ -28,3 +28,12 @@ class AddNoteButtomSheet extends StatelessWidget {
     );
   }
 }
+
+class customButton extends StatelessWidget {
+  const customButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
