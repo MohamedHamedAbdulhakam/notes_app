@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/views/edit_note_view.dart';
+import 'package:hive_generator/hive_generator.dart';
 
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key});
