@@ -30,7 +30,7 @@ class NoteItem extends StatelessWidget {
                   left: 24,
                 ),
                 child: ListTile(
-                  title: Text(
+                  title: const Text(
                     'Flutter Tips',
                     style: TextStyle(color: Colors.black, fontSize: 26),
                   ),
@@ -44,7 +44,7 @@ class NoteItem extends StatelessWidget {
                   ),
                   trailing: IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.delete,
                       color: Colors.black,
                       size: 30,

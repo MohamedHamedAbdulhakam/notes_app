@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
+// ignore: camel_case_types
 class customButton extends StatelessWidget {
   const customButton({super.key, this.onTap, this.isloading = false});
   final void Function()? onTap;
@@ -18,10 +19,10 @@ class customButton extends StatelessWidget {
         ),
         child: Center(
           child: isloading
-              ? SizedBox(
+              ? const SizedBox(
                   height: 24,
                   width: 24,
-                  child: const CircularProgressIndicator(
+                  child: CircularProgressIndicator(
                     color: Colors.black,
                   ),
                 )

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:bloc/bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:meta/meta.dart';
@@ -11,15 +9,13 @@ part 'notes_state.dart';
 
 class NotesCubit extends Cubit<NotesState> {
   NotesCubit() : super(NotesInitial());
-  fetchAllNotes() async {
+  List<NoteModel>? notes;
+  fetchAllNotes() {
     emit(NotesLoading());
-    try {
-      var notebox = Hive.box<NoteModel>(kNoteBox);
 
-      List<NoteModel> notes = notebox.values.toList();
-      emit(NotesSuccess(notes));
-    } catch (e) {
-      emit(NotesFailure(e.toString()));
-    }
+    var notebox = Hive.box<NoteModel>(kNoteBox);
+
+    notes = notebox.values.toList();
+    // emit(NotesSuccess());
   }
 }
